@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="test-poc-04ff15b9dd9a.json" />
+    <None Remove="test-poc-244619-d1a7b65b8438.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="test-poc-04ff15b9dd9a.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test-poc-244619-d1a7b65b8438.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Datastore.V1" Version="2.1.0" />
+    <PackageReference Include="Google.Cloud.Firestore" Version="1.0.0-beta22" />
+    <PackageReference Include="Google.Cloud.Firestore.V1" Version="1.0.0-beta22" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+  </ItemGroup>
+
+</Project>

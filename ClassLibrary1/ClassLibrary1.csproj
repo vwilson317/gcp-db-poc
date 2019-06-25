@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Datastore.V1" Version="2.1.0" />
+    <PackageReference Include="Google.Cloud.Firestore" Version="1.0.0-beta22" />
+    <PackageReference Include="Google.Cloud.Firestore.V1" Version="1.0.0-beta22" />
+  </ItemGroup>
+
+</Project>
