@@ -5,6 +5,17 @@ using Google.Cloud.Firestore;
 
 namespace ClassLibrary1
 {
+    public static class DataHelper
+    {
+        public static async Task Import<T>(IEnumerable<T> data)
+        {
+            foreach (var currentItem in data)
+            {
+               await DataAccess.Add(currentItem);
+            }
+        }
+    }
+
     public static class DataAccess
     {
         public static async Task<string> Add<T>(T obj)

@@ -11,7 +11,7 @@ namespace ClassLibrary1
             var collectionNamePropInfo = propertyInfos.FirstOrDefault(x => x.Name == nameof(FirestoreCollection.CollectionName));
             if (collectionNamePropInfo == null)
             {
-                throw new NotImplementedException($"CollectionName not implemented for type {obj.GetType()}");
+                throw new NotImplementedException($"{nameof(CollectionName)} not implemented for type {obj.GetType()}");
             }
 
             return collectionNamePropInfo.GetValue(obj).ToString();

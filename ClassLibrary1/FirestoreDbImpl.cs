@@ -5,8 +5,6 @@ using Grpc.Core;
 
 namespace ClassLibrary1
 {
-    //todo: move to appconfig
-
     public static class FirestoreDbImpl
     {
         private static FirestoreDb _db;
